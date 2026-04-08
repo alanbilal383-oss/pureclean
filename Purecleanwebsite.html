@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pure Clean Pressure Washing</title>
+  <meta name="description" content="Pure Clean Pressure Washing offers pressure washing, gutter cleaning, driveway cleaning, deck cleaning, patio cleaning, fence and gate washing, and eaves cleaning in London, Ontario." />
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --black-soft: #141414;
+      --white: #ffffff;
+      --white-soft: #f7f4ee;
+      --gold: #d4af37;
+      --gold-dark: #a9851f;
+      --gold-soft: #f2de9d;
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      --radius: 22px;
+      --max-width: 1200px;
+    }
+    :root {
+      --black: #0f0f0f;
+      --black-soft: #1a1a1a;
+      --white: #ffffff;
+      --white-soft: #f4f4f4;
+      --gold: #c7a24a;
+      --gold-dark: #9b7a2e;
+      --border: rgba(255, 255, 255, 0.12);
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+      --radius: 22px;
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b0b0b 0%, #131313 100%);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+      background: rgba(10, 10, 10, 0.92);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .brand-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.85rem;
+      color: #d8d8d8;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: 0.25s ease;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: rgba(199, 162, 74, 0.12);
+      color: var(--gold);
+      outline: none;
+    }
+
+    .nav-cta {
+      padding: 12px 18px;
+      border: 1px solid var(--gold);
+      color: var(--black);
+      background: var(--gold);
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-cta:hover,
+    .nav-cta:focus-visible,
+    .button:hover,
+    .button:focus-visible,
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    section {
+      padding: 92px 0;
+    }
+
+    .hero {
+      min-height: calc(100vh - 82px);
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.68)),
+        url('/mnt/data/1.png') center/cover no-repeat;
+      opacity: 0.55;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(760px, 100%);
+      padding: 28px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      margin: 0 0 28px;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #e8e8e8;
+      max-width: 650px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .button {
+      background: var(--gold);
+      color: var(--black);
+      border: 1px solid var(--gold);
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+    .hero-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      color: #f0f0f0;
+      font-size: 0.96rem;
+    }
+
+    .hero-info span {
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+    }
+
+    .section-header {
+      margin-bottom: 34px;
+      max-width: 760px;
+    }
+
+    .section-header h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--white);
+    }
+
+    .section-header p {
+      margin: 0;
+      color: #d7d7d7;
+      font-size: 1.04rem;
+    }
+
+    .quote-banner {
+      margin-top: 28px;
+      padding: 28px;
+      border-radius: var(--radius);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      background: linear-gradient(120deg, rgba(212, 175, 55, 0.16), rgba(255, 255, 255, 0.04));
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: var(--shadow);
+    }
+
+    .quote-banner h3 {
+      margin: 0 0 8px;
+      font-size: 1.6rem;
+      color: var(--white);
+    }
+
+    .quote-banner p {
+      margin: 0;
+      color: #ececec;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .work-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.28s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .work-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #1f1f1f;
+    }
+
+    .work-card-body {
+      padding: 20px;
+    }
+
+    .work-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 1.15rem;
+    }
+
+    .work-card p {
+      margin: 0;
+      color: #e8e8e8;
+      font-size: 0.97rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.28s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(199, 162, 74, 0.45);
+    }
+
+    .card-image {
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      width: 100%;
+      background: #1f1f1f;
+    }
+
+    .card-body {
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--gold);
+      font-size: 1.18rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #e6e6e6;
+      font-size: 0.98rem;
+    }
+
+    .about-strip {
+      margin-top: 26px;
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(120deg, rgba(199, 162, 74, 0.14), rgba(255, 255, 255, 0.04));
+    }
+
+    .about-strip p {
+      margin: 0;
+      font-size: 1rem;
+      color: #f2f2f2;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-panel,
+    .contact-form-wrap {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel h3,
+    .contact-form-wrap h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.5rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .contact-item {
+      padding: 15px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--white);
+      font-size: 1rem;
+      resize: vertical;
+      transition: 0.2s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #cfcfcf;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(199, 162, 74, 0.14);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 180px;
+    }
+
+    .submit-note {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #d3d3d3;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 42px;
+      color: #d9d9d9;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .services-grid,
+      .contact-grid,
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0 18px;
+      }
+
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 74px 0;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-title">Pure Clean Pressure Washing</div>
+        <div class="brand-subtitle">High-End Exterior Cleaning in London, Ontario</div>
+      </div>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="tel:5196366653">Call 519-636-6653</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Pure Clean Pressure Washing • London, Ontario</div>
+          <h1>Premium pressure washing that gives your property a cleaner, sharper, high-end look.</h1>
+          <p>
+            Pure Clean Pressure Washing delivers professional exterior cleaning for homeowners who want their property to look spotless, bright, and well maintained. From concrete and patios to decks, fences, and gutters, we help bring outdoor surfaces back to life.
+          </p>
+
+          <div class="button-row">
+            <a class="button" href="#contact">Get Your Free Quote</a>
+            <a class="button-secondary" href="#services">View Services</a>
+          </div>
+
+          <div class="hero-info">
+            <span>Driveways</span>
+            <span>Decks & Patios</span>
+            <span>Walk Paths</span>
+            <span>Fences & Gates</span>
+            <span>Gutters & Eaves</span>
+            <span>Free Quotes</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="quote-banner">
+          <div>
+            <h3>Free Quotes with a clean, premium finish.</h3>
+            <p>Serving London, Ontario with reliable pressure washing and exterior cleaning for homes that deserve to stand out.</p>
+          </div>
+          <a class="button" href="#contact">Request a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>
+            Pure Clean Ontario provides exterior cleaning services that improve curb appeal and help keep outdoor surfaces looking their best.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <img class="card-image" src="C:\Users\alanl\Desktop\images\walkway.png" alt="Before and after driveway cleaning" />
+            <div class="card-body">
+              <h3>Driveways & Walk Paths</h3>
+              <p>
+                We remove built-up dirt, grime, and surface stains from driveways and walk paths to leave them looking cleaner and brighter.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-image" src="C:\Users\alanl\Desktop\images\deck.png" alt="Before and after deck cleaning" />
+            <div class="card-body">
+              <h3>Decks & Patios</h3>
+              <p>
+                We clean outdoor living spaces carefully to help restore the look of decks and patios and make them more inviting.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-image" src="C:\Users\alanl\Desktop\images\fence.png" alt="Fence pressure washing service" />
+            <div class="card-body">
+              <h3>Fences & Gates</h3>
+              <p>
+                We wash fences and gates to help remove weather marks, dirt, and buildup so the whole property looks more polished.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-image" src="C:\Users\alanl\Desktop\images\siding.png" alt="Home siding pressure washing" />
+            <div class="card-body">
+              <h3>Pressure Washing</h3>
+              <p>
+                Our pressure washing service is ideal for a range of outdoor surfaces that need a deep, professional clean.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-image" src="C:\Users\alanl\Desktop\images\gutters.png" alt="Before and after gutter cleaning" />
+            <div class="card-body">
+              <h3>Gutters & Eaves</h3>
+              <p>
+                We clean gutters and eaves to help improve appearance and clear away leaves, dirt, and buildup from the exterior.
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-image" src="C:\Users\alanl\Desktop\images\patio.png"alt="Patio pressure washing service" />
+            <div class="card-body">
+              <h3>Residential Exterior Cleaning</h3>
+              <p>
+                From front entrances to backyard surfaces, we help homeowners keep outdoor spaces looking neat, fresh, and cared for.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="about-strip">
+          <p>
+            Based in <strong>London, Ontario</strong>, Pure Clean Pressure Washing focuses on premium exterior cleaning with strong attention to detail and a clean, polished finish. Whether you need your driveway brightened, your deck refreshed, your patio cleaned, or your gutters and eaves cleared out, we deliver results that make your home look cared for.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-header">
+          <h2>Work We’ve Done</h2>
+          <p>
+            A few real before-and-after results showing the difference professional pressure washing and exterior cleaning can make.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card">
+            <img class="work-image" src="C:\Users\alanl\Desktop\images\patio1banda.png" alt="Before and after patio cleaning" />
+            <div class="work-card-body">
+              <h3>Patio Brick Cleaning</h3>
+              <p>Built-up dirt and surface staining were removed to bring back a much cleaner, brighter look.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img class="work-image" src="C:\Users\alanl\Desktop\images\patio2banda.png" alt="Before and after walkway cleaning" />
+            <div class="work-card-body">
+              <h3>Concrete Walkway Refresh</h3>
+              <p>This walkway was lifted from dull and stained to a cleaner finish that instantly improved curb appeal.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img class="work-image" src="C:\Users\alanl\Desktop\images\deckbanda.png" alt="Before and after deck pressure washing" />
+            <div class="work-card-body">
+              <h3>Deck Pressure Washing</h3>
+              <p>We cleaned away dark buildup and weathering so the deck looked fresher and far more inviting.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img class="work-image" src="C:\Users\alanl\Desktop\images\guttersbenda2.jpg" />
+            <div class="work-card-body">
+              <h3>Gutter & Eaves Cleaning</h3>
+              <p>Leaves, buildup, and clogged debris were cleared out to restore flow and improve the home’s appearance.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img class="work-image" src="C:\Users\alanl\Desktop\images\drivewaybanda.png" alt="Before and after driveway cleaning" />
+            <div class="work-card-body">
+              <h3>Driveway Surface Cleaning</h3>
+              <p>Pressure washing removed years of grime and made the surface look much cleaner and more even.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <img class="work-image" src="C:\Users\alanl\Desktop\images\guttersbanda.png" alt="Before and after gutter cleaning results" />
+            <div class="work-card-body">
+              <h3>Detailed Gutter Results</h3>
+              <p>Before-and-after results that show the difference a full gutter clean can make around the home.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get a Free Quote</h2>
+          <p>
+            Send us your details below and we’ll get back to you with a free quote or answer any questions you have.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-panel">
+            <h3>Get in touch</h3>
+            <p>
+              Reach out today and we will get back to you as soon as possible.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <strong>Phone</strong>
+                <a href="tel:5196366653">519-636-6653</a>
+              </div>
+              <div class="contact-item">
+                <strong>Email</strong>
+                <a href="mailto:purecleanontario@gmail.com">purecleanontario@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <strong>Location</strong>
+                London, Ontario, Canada
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h3>Request your free quote</h3>
+            <form action="https://formsubmit.co/purecleanontario@gmail.com" method="POST">
+              <div class="field-row">
+                <input type="text" name="name" placeholder="Your name" required />
+                <input type="email" name="email" placeholder="Your email" required />
+              </div>
+
+              <input type="tel" name="phone" placeholder="Your phone number" required />
+              <textarea name="message" placeholder="Your message" required></textarea>
+
+              <input type="hidden" name="_subject" value="New Website Inquiry - Pure Clean Ontario" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <button class="button" type="submit">Submit</button>
+              <p class="submit-note">Messages are set up to send to purecleanontario@gmail.com through FormSubmit.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© 2026 Pure Clean Pressure Washing</div>
+      <div>London, Ontario, Canada • 519-636-6653</div>
+    </div>
+  </footer>
+
+  <!--
+    IMPORTANT:
+    If you move this website to normal hosting, put your images in the same project folder or an images folder.
+    Then change image paths like this:
+    src="images/driveway-before-after.png"
+
+    RIGHT NOW these images point to the files you sent in this chat.
+
+    FORM NOTE:
+    FormSubmit usually sends a one-time confirmation email to purecleanontario@gmail.com.
+    Confirm it once and then your form submissions should work.
+  -->
+</body>
+</html>
