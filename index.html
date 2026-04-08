@@ -34,6 +34,13 @@ html, body {
     gap: 12px;
   }
 }
+    .container.nav {
+  display: flex;
+  align-items: center;
+}
+    .menu-toggle {
+  margin-left: auto;
+}
 </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -578,13 +585,13 @@ html, body {
 </head>
 <body>
   <header class="site-header">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
     <div class="container nav">
       <div class="brand">
         <div class="brand-title">Pure Clean Pressure Washing</div>
         <div class="brand-subtitle">High-End Exterior Cleaning in London, Ontario</div>
       </div>
-
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
       <nav class="nav-links" id="mobileNav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
