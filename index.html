@@ -542,17 +542,49 @@ html, body {
         font-size: 2.5rem;
       }
     }
+    .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: black;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 12px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
   </style>
 </head>
 <body>
   <header class="site-header">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     <div class="container nav">
       <div class="brand">
         <div class="brand-title">Pure Clean Pressure Washing</div>
         <div class="brand-subtitle">High-End Exterior Cleaning in London, Ontario</div>
       </div>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <nav class="nav-links" id="mobileNav" aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#work">Our Work</a>
@@ -818,5 +850,10 @@ html, body {
     FormSubmit usually sends a one-time confirmation email to purecleanontario@gmail.com.
     Confirm it once and then your form submissions should work.
   -->
+  <script>
+function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("show");
+}
+</script>
 </body>
 </html>
